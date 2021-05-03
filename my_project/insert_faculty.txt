@@ -1,0 +1,101 @@
+db.faculty.insert({
+user_id: 'lohit_subodh',
+password: '123',
+name: 'Lohit Subodh',
+phd: 'University of California, USA',
+email_add: 'lohit@ccn.ac.in',
+web_add: 'lohit.php',
+institute: 'City College of New York', 
+research_interests: 'Fog Computing, Scheduling & Resource Allocation, Parallel & Distributed Computing.',
+designation:  'Faculty',
+department: 'Computer Science & Engineering',
+teaching: 'In semester 1, academic year 2019 - 2010, I am teaching CS 303: Operating Systems.<br>In the past, I have taught the following courses:<br>CSL 604/704: Advanced Operating Systems, GE 103 - Introduction to Programming and Data Structures, GEL 103 - Introduction to Computing, CSL 301 - Introduction to Database Systems, CSL 343 - Computer Networks, CSL 611 - Real Time Systems, CSL 711 - Distributed Systems.',
+
+education:'PhD: Computer Science & Engineering, University of Cincinnati, USA, 2005.<br>BE: Electrical & Electronics Engineering, P.D.A. College of Engineering, Gulbarga, India, 1998.',
+
+work_experience: 'December 2015 - present: Faculty, Department of Computer Science & Engineering, IIT Ropar.<br>June 2010 - November 2016: Assistant Professor, Department of Computer Science & Engineering, IIT Ropar.<br>August 2004 - May 2010: Assistant Professor, Department of Computer Science, Quincy University, USA.',
+
+academic_visits: 'Department of Computing, Imperial College, London, UK, March 2011.<br>School of Computer Science & Informatics, Cardiff University, UK, October 2016 & May - July 2017.<br>Department of Computer Science, Binghamton University, USA, July 2017.',
+
+publications: 'A. Kaur and N. Auluck, "A Fog based Fire Evacuation Framework", The Eighteenth Australasian Symposium of Parallel and Distributed Computing (AUSPDC), February 3 - 7, Melbourne, Australia 2020.<br>K. Fizza, N. Auluck and A. Azim, "Improving the Schedulability of Real-Time Tasks using Fog Computing", IEEE Transactions on Services Computing, 2019.<br>A. Singh and N. Auluck, "Load Balancing Aware Scheduling Algorithms for Fog Networks", Journal of Software: Practice and Experience, Wiley, 2019.<br>A. Singh, N. Auluck, O. Rana, A. Jones, S. Nepal, "Scheduling Real-Time Security Aware Tasks in Fog Networks", IEEE Transactions on Services Computing, 2019.<br>S. Saroja and N. Auluck, "Multi-Criteria Decision Making for Heterogeneous Multiprocessors Scheduling", International Journal of Information Technology & Decision Making, vol. 17, no. 5, 2018.<br>K. Fizza, N. Auluck, O. Rana and L. Bittencourt, "PASHE: Privacy aware Scheduling in a Heterogeneous Fog Environment", The Sixth IEEE International Conference on Future of Internet of Things and Cloud, August 6-8, Barcelona, Spain, 2018.<br>K. Fizza, N. Auluck, A. Azim, "Improving the Interactivity and Security of Diabetes Data using Fog Computing (Poster)", The Ninth Student Research Conference, University of Ontario Institute of Technology, Oshawa, Canada, May 3, 2018.<br>A. Singh, N. Auluck, O. Rana, A. Jones, S. Nepal, "RT-SANE: Real-Time Security aware Scheduling on the Network Edge", The Tenth IEEE/ACM International Conference on Utility & Cloud Computing (UCC), Austin, USA, December 5-8, 2017 (finalist for best paper award).<br>I. Petri, O. Rana, J. Bignell, S. Nepal, and N. Auluck, "Incentivising Resource Sharing in Edge Computing Applications", The Fourteenth International Conference on Economies of Grids, Clouds, System and Services (GECON 2017), Anglet, France, September 19-21, 2017.<br>J. Singh, A. Gujral, H. Singh, J. Singh, N. Auluck, “Energy Aware Scheduling on Heterogeneous Multiprocessors with DVFS & Duplication”, The Seventeenth IEEE International Conference on Parallel & Distributed Computing, Applications & Technologies (PDCAT) , Guangzhou, China, December 16 - 18, 2016.',
+
+program_committe_work: 'Workshop on Cloud, IoT and Fog Security (CIFS), Auckland, New Zealand, December 2 - 5, 2019: http://cifs.servicelaboratory.ch/ - submission deadline is September 15, 2019.The Third IEEE International Conference on Fog and Edge Computing (ICFEC): 2018, 2019 and 2020: http://dream-lab.cds.iisc.ac.in/icfec2020/ - submission deadline is January 31, 2020.<br>The Nineteenth IEEE International Conference on Scalable Computing and Communications (SCALCOM): 2018 and 2019.<br>Student Research Symposium, The Twenty Third IEEE International conference on High Performance Computing (HiPC), Hyderabad, India, December 2016.<br>Student Research Symposium, The Twenty Second IEEE International conference on High Performance Computing (HiPC), Bangalore, India, December 2015.'})
+
+
+db.lohit.insertMany([
+   { title: "phd", content: "University of California, USA" },
+   { title: "research_interests", content: "Fog Computing, Scheduling & Resource Allocation, Parallel & Distributed Computing." },
+   { title: "teaching", content: "In semester 1, academic year 2019 - 2010, I am teaching CS 303: Operating Systems.<br>In the past, I have taught the following courses:<br>CSL 604/704: Advanced Operating Systems, GE 103 - Introduction to Programming and Data Structures, GEL 103 - Introduction to Computing, CSL 301 - Introduction to Database Systems, CSL 343 - Computer Networks, CSL 611 - Real Time Systems, CSL 711 - Distributed Systems."},
+   { title: "education", content: "PhD: Computer Science & Engineering, University of Cincinnati, USA, 2005.<br>BE: Electrical & Electronics Engineering, P.D.A. College of Engineering, Gulbarga, India, 1998." },
+   { title: "work_experience", content: "December 2015 - present: Faculty, Department of Computer Science & Engineering, IIT Ropar.<br>June 2010 - November 2016: Assistant Professor, Department of Computer Science & Engineering, IIT Ropar.<br>August 2004 - May 2010: Assistant Professor, Department of Computer Science, Quincy University, USA." },
+   { title: "academic_visits", content: "Department of Computing, Imperial College, London, UK, March 2011.<br>School of Computer Science & Informatics, Cardiff University, UK, October 2016 & May - July 2017.<br>Department of Computer Science, Binghamton University, USA, July 2017." },
+   { title: "publications", content: 'A. Kaur and N. Auluck, "A Fog based Fire Evacuation Framework", The Eighteenth Australasian Symposium of Parallel and Distributed Computing (AUSPDC), February 3 - 7, Melbourne, Australia 2020.<br>K. Fizza, N. Auluck and A. Azim, "Improving the Schedulability of Real-Time Tasks using Fog Computing", IEEE Transactions on Services Computing, 2019.<br>A. Singh and N. Auluck, "Load Balancing Aware Scheduling Algorithms for Fog Networks", Journal of Software: Practice and Experience, Wiley, 2019.<br>A. Singh, N. Auluck, O. Rana, A. Jones, S. Nepal, "Scheduling Real-Time Security Aware Tasks in Fog Networks", IEEE Transactions on Services Computing, 2019.<br>S. Saroja and N. Auluck, "Multi-Criteria Decision Making for Heterogeneous Multiprocessors Scheduling", International Journal of Information Technology & Decision Making, vol. 17, no. 5, 2018.<br>K. Fizza, N. Auluck, O. Rana and L. Bittencourt, "PASHE: Privacy aware Scheduling in a Heterogeneous Fog Environment", The Sixth IEEE International Conference on Future of Internet of Things and Cloud, August 6-8, Barcelona, Spain, 2018.<br>K. Fizza, N. Auluck, A. Azim, "Improving the Interactivity and Security of Diabetes Data using Fog Computing (Poster)", The Ninth Student Research Conference, University of Ontario Institute of Technology, Oshawa, Canada, May 3, 2018.<br>A. Singh, N. Auluck, O. Rana, A. Jones, S. Nepal, "RT-SANE: Real-Time Security aware Scheduling on the Network Edge", The Tenth IEEE/ACM International Conference on Utility & Cloud Computing (UCC), Austin, USA, December 5-8, 2017 (finalist for best paper award).<br>I. Petri, O. Rana, J. Bignell, S. Nepal, and N. Auluck, "Incentivising Resource Sharing in Edge Computing Applications", The Fourteenth International Conference on Economies of Grids, Clouds, System and Services (GECON 2017), Anglet, France, September 19-21, 2017.<br>J. Singh, A. Gujral, H. Singh, J. Singh, N. Auluck, “Energy Aware Scheduling on Heterogeneous Multiprocessors with DVFS & Duplication”, The Seventeenth IEEE International Conference on Parallel & Distributed Computing, Applications & Technologies (PDCAT) , Guangzhou, China, December 16 - 18, 2016.'},
+   { title: "program_committe_work", content: "Workshop on Cloud, IoT and Fog Security (CIFS), Auckland, New Zealand, December 2 - 5, 2019: http://cifs.servicelaboratory.ch/ - submission deadline is September 15, 2019.The Third IEEE International Conference on Fog and Edge Computing (ICFEC): 2018, 2019 and 2020: http://dream-lab.cds.iisc.ac.in/icfec2020/ - submission deadline is January 31, 2020.<br>The Nineteenth IEEE International Conference on Scalable Computing and Communications (SCALCOM): 2018 and 2019.<br>Student Research Symposium, The Twenty Third IEEE International conference on High Performance Computing (HiPC), Hyderabad, India, December 2016.<br>Student Research Symposium, The Twenty Second IEEE International conference on High Performance Computing (HiPC), Bangalore, India, December 2015." }
+]);
+
+db.faculty.insertOne({
+user_id: 'sk_das',
+password: '123',
+name: 'Sk Das',
+email_add: 'sk@ccn.ac.in',
+web_add: 'sk.php',
+institute: 'City College of New York',
+designation:  'Director',
+department: 'Mechanical Engineering'})
+
+db.sk.deleteOne( { "user_id" : "sk_das" } );
+
+db.sk.insertMany([
+   { title: "PHD", content: "Cambridge University, USA" },
+   { title: "Research Interests", content: "Fog Computing, Scheduling & Resource Allocation, Parallel & Distributed Computing." },
+   { title: "Courses", content: "CS 303: Operating Systems<br>CSL 604/704: Advanced Operating Systems<br> GE 103 - Introduction to Programming and Data Structures<br> GEL 103 - Introduction to Computing<br> CSL 301 - Introduction to Database Systems<br>CSL 343 - Computer Networks<br> CSL 611 - Real Time Systems<br> CSL 711 - Distributed Systems."},
+   { title: "Education", content: "PhD: Computer Science & Engineering, University of Cincinnati, USA, 2005.<br>BE: Electrical & Electronics Engineering, P.D.A. College of Engineering, Gulbarga, India, 1998." },
+   { title: "Work Experience", content: "December 2015 - present: Faculty, Department of Computer Science & Engineering, IIT Ropar.<br>June 2010 - November 2016: Assistant Professor, Department of Computer Science & Engineering, IIT Ropar.<br>August 2004 - May 2010: Assistant Professor, Department of Computer Science, Quincy University, USA." },
+   { title: "Academic Visits", content: "Department of Computing, Imperial College, London, UK, March 2011.<br>School of Computer Science & Informatics, Cardiff University, UK, October 2016 & May - July 2017.<br>Department of Computer Science, Binghamton University, USA, July 2017." },
+   { title: "Publications", content: 'A. Kaur and N. Auluck, "A Fog based Fire Evacuation Framework", The Eighteenth Australasian Symposium of Parallel and Distributed Computing (AUSPDC), February 3 - 7, Melbourne, Australia 2020.<br>K. Fizza, N. Auluck and A. Azim, "Improving the Schedulability of Real-Time Tasks using Fog Computing", IEEE Transactions on Services Computing, 2019.<br>A. Singh and N. Auluck, "Load Balancing Aware Scheduling Algorithms for Fog Networks", Journal of Software: Practice and Experience, Wiley, 2019.<br>A. Singh, N. Auluck, O. Rana, A. Jones, S. Nepal, "Scheduling Real-Time Security Aware Tasks in Fog Networks", IEEE Transactions on Services Computing, 2019.<br>S. Saroja and N. Auluck, "Multi-Criteria Decision Making for Heterogeneous Multiprocessors Scheduling", International Journal of Information Technology & Decision Making, vol. 17, no. 5, 2018.<br>K. Fizza, N. Auluck, O. Rana and L. Bittencourt, "PASHE: Privacy aware Scheduling in a Heterogeneous Fog Environment", The Sixth IEEE International Conference on Future of Internet of Things and Cloud, August 6-8, Barcelona, Spain, 2018.<br>K. Fizza, N. Auluck, A. Azim, "Improving the Interactivity and Security of Diabetes Data using Fog Computing (Poster)", The Ninth Student Research Conference, University of Ontario Institute of Technology, Oshawa, Canada, May 3, 2018.<br>A. Singh, N. Auluck, O. Rana, A. Jones, S. Nepal, "RT-SANE: Real-Time Security aware Scheduling on the Network Edge", The Tenth IEEE/ACM International Conference on Utility & Cloud Computing (UCC), Austin, USA, December 5-8, 2017 (finalist for best paper award).<br>I. Petri, O. Rana, J. Bignell, S. Nepal, and N. Auluck, "Incentivising Resource Sharing in Edge Computing Applications", The Fourteenth International Conference on Economies of Grids, Clouds, System and Services (GECON 2017), Anglet, France, September 19-21, 2017.<br>J. Singh, A. Gujral, H. Singh, J. Singh, N. Auluck, “Energy Aware Scheduling on Heterogeneous Multiprocessors with DVFS & Duplication”, The Seventeenth IEEE International Conference on Parallel & Distributed Computing, Applications & Technologies (PDCAT) , Guangzhou, China, December 16 - 18, 2016.'},
+   { title: "Program Committe Work", content: "Workshop on Cloud, IoT and Fog Security (CIFS), Auckland, New Zealand, December 2 - 5, 2019: http://cifs.servicelaboratory.ch/ - submission deadline is September 15, 2019.The Third IEEE International Conference on Fog and Edge Computing (ICFEC): 2018, 2019 and 2020: http://dream-lab.cds.iisc.ac.in/icfec2020/ - submission deadline is January 31, 2020.<br>The Nineteenth IEEE International Conference on Scalable Computing and Communications (SCALCOM): 2018 and 2019.<br>Student Research Symposium, The Twenty Third IEEE International conference on High Performance Computing (HiPC), Hyderabad, India, December 2016.<br>Student Research Symposium, The Twenty Second IEEE International conference on High Performance Computing (HiPC), Bangalore, India, December 2015." }
+]);
+
+db.sk.drop()
+
+db.faculty.insertOne({
+user_id: 'ramjee_repaka',
+password: '123',
+name: 'Ramjee Repaka',
+email_add: 'ramjee@ccn.ac.in',
+web_add: 'ramjee.php',
+institute: 'City College of New York',
+designation:  'HOD',
+department: 'Mechanical Engineering'})
+
+db.dheeraj.insertMany([
+   { title: "PHD", content: "University of Toronto, Canada" },
+   { title: "Research Interests", content: "Fog Computing, Scheduling & Resource Allocation, Parallel & Distributed Computing." },
+   { title: "Courses", content: "CS 303: Operating Systems<br>CSL 604/704: Advanced Operating Systems<br> GE 103 - Introduction to Programming and Data Structures<br> GEL 103 - Introduction to Computing<br> CSL 301 - Introduction to Database Systems<br>CSL 343 - Computer Networks<br> CSL 611 - Real Time Systems<br> CSL 711 - Distributed Systems."},
+   { title: "Education", content: "PhD: Computer Science & Engineering, University of Cincinnati, USA, 2005.<br>BE: Electrical & Electronics Engineering, P.D.A. College of Engineering, Gulbarga, India, 1998." },
+   { title: "Work Experience", content: "December 2015 - present: Faculty, Department of Computer Science & Engineering, IIT Ropar.<br>June 2010 - November 2016: Assistant Professor, Department of Computer Science & Engineering, IIT Ropar.<br>August 2004 - May 2010: Assistant Professor, Department of Computer Science, Quincy University, USA." },
+   { title: "Academic Visits", content: "Department of Computing, Imperial College, London, UK, March 2011.<br>School of Computer Science & Informatics, Cardiff University, UK, October 2016 & May - July 2017.<br>Department of Computer Science, Binghamton University, USA, July 2017." },
+   { title: "Publications", content: 'A. Kaur and N. Auluck, "A Fog based Fire Evacuation Framework", The Eighteenth Australasian Symposium of Parallel and Distributed Computing (AUSPDC), February 3 - 7, Melbourne, Australia 2020.<br>K. Fizza, N. Auluck and A. Azim, "Improving the Schedulability of Real-Time Tasks using Fog Computing", IEEE Transactions on Services Computing, 2019.<br>A. Singh and N. Auluck, "Load Balancing Aware Scheduling Algorithms for Fog Networks", Journal of Software: Practice and Experience, Wiley, 2019.<br>A. Singh, N. Auluck, O. Rana, A. Jones, S. Nepal, "Scheduling Real-Time Security Aware Tasks in Fog Networks", IEEE Transactions on Services Computing, 2019.<br>S. Saroja and N. Auluck, "Multi-Criteria Decision Making for Heterogeneous Multiprocessors Scheduling", International Journal of Information Technology & Decision Making, vol. 17, no. 5, 2018.<br>K. Fizza, N. Auluck, O. Rana and L. Bittencourt, "PASHE: Privacy aware Scheduling in a Heterogeneous Fog Environment", The Sixth IEEE International Conference on Future of Internet of Things and Cloud, August 6-8, Barcelona, Spain, 2018.<br>K. Fizza, N. Auluck, A. Azim, "Improving the Interactivity and Security of Diabetes Data using Fog Computing (Poster)", The Ninth Student Research Conference, University of Ontario Institute of Technology, Oshawa, Canada, May 3, 2018.<br>A. Singh, N. Auluck, O. Rana, A. Jones, S. Nepal, "RT-SANE: Real-Time Security aware Scheduling on the Network Edge", The Tenth IEEE/ACM International Conference on Utility & Cloud Computing (UCC), Austin, USA, December 5-8, 2017 (finalist for best paper award).<br>I. Petri, O. Rana, J. Bignell, S. Nepal, and N. Auluck, "Incentivising Resource Sharing in Edge Computing Applications", The Fourteenth International Conference on Economies of Grids, Clouds, System and Services (GECON 2017), Anglet, France, September 19-21, 2017.<br>J. Singh, A. Gujral, H. Singh, J. Singh, N. Auluck, “Energy Aware Scheduling on Heterogeneous Multiprocessors with DVFS & Duplication”, The Seventeenth IEEE International Conference on Parallel & Distributed Computing, Applications & Technologies (PDCAT) , Guangzhou, China, December 16 - 18, 2016.'},
+   { title: "Program Committe Work", content: "Workshop on Cloud, IoT and Fog Security (CIFS), Auckland, New Zealand, December 2 - 5, 2019: http://cifs.servicelaboratory.ch/ - submission deadline is September 15, 2019.The Third IEEE International Conference on Fog and Edge Computing (ICFEC): 2018, 2019 and 2020: http://dream-lab.cds.iisc.ac.in/icfec2020/ - submission deadline is January 31, 2020.<br>The Nineteenth IEEE International Conference on Scalable Computing and Communications (SCALCOM): 2018 and 2019.<br>Student Research Symposium, The Twenty Third IEEE International conference on High Performance Computing (HiPC), Hyderabad, India, December 2016.<br>Student Research Symposium, The Twenty Second IEEE International conference on High Performance Computing (HiPC), Bangalore, India, December 2015." }
+]);
+
+
+db.faculty.insertOne({
+user_id: 'sc_roy',
+password: '123',
+name: 'Sc Roy',
+email_add: 'sc@ccn.ac.in',
+web_add: 'sc.php',
+institute: 'City College of New York',
+designation:  'Faculty',
+department: 'Mechanical Engineering'})
+
+db.faculty.insertOne({
+user_id: 'dheeraj_mahajan',
+password: '123',
+name: 'dheeraj Mahajan',
+email_add: 'dheeraj@ccn.ac.in',
+web_add: 'dheeraj.php',
+institute: 'City College of New York',
+designation:  'Dean Faculty Affairs',
+department: 'Mechanical Engineering'})

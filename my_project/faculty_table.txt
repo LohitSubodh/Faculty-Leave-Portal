@@ -1,0 +1,252 @@
+create table faculty(
+	user_id varchar(30) not null,
+	name varchar(30) not null,
+	designation varchar (30) not null,
+	department varchar(10) not null,
+	curr_leaves int not null,
+	next_leaves int not null,
+	primary key ( user_id)
+);
+
+create table hod_history
+(
+	user_id varchar(30) not null references faculty(user_id),
+	department varchar(30) not null references faculty(department),
+	start_date timestamp not null,
+	end_date timestamp
+);
+
+create table dfa_history
+(
+	user_id varchar(30) not null references faculty(user_id),
+	department varchar(30) not null references faculty(department),
+	start_date timestamp not null,
+	end_date timestamp
+);
+
+
+update faculty
+set  curr_leaves=30
+where user_id='mukesh_saini';
+
+create table process
+(
+	process_id serial primary key,
+	process_typ varchar(30)
+);	
+
+
+create table application(
+	application_id bigserial primary key,
+	user_id varchar(30) not null references faculty(user_id) ,
+	title varchar(50) not null,
+	application_txt text not null,
+	num_leaves int not null,
+	start_date date not null,
+	end_date date not null,
+	time_stamp timestamp not null,
+	curr_status varchar(30) not null,
+	curr_state_id varchar(30) not null references faculty(user_id),
+	process_id int not null references process(process_id),
+	leaves_remaining int,
+	redirect_id varchar(30) references faculty(user_id)
+); 
+
+alter table application
+add leaves_remaining int;
+
+alter table application
+add  redirect_id varchar(30) references faculty(user_id) ;
+
+create table action
+(
+	application_id bigserial not null references application(application_id),
+	user_id varchar(30) not null references faculty(user_id),
+	action_typ varchar(50) not null,
+	time_stamp timestamp not null
+);
+	
+create table transition
+(
+	process_id serial references process(process_id),
+	curr_state varchar(30) references designation_table(designation),
+	next_state varchar(30) references designation_table(designation)
+);
+
+create table comments
+(
+	application_id bigserial references application(application_id),
+	comment_txt text not null,
+	time_stamp timestamp not null,
+	user_id_by  varchar(30) not null references faculty(user_id),
+	user_id_to varchar(30) not null references faculty(user_id) 
+);	
+
+create table designation_table(
+	designation varchar(30) not null primary key
+);
+create table login_info(
+	username varchar(30) not null,
+	password varchar(30) not null
+);
+
+insert into process values (default , 'faculty') , (default , 'dean') , (default , 'associate dean' ),(default , 'hod');  
+
+insert into designation_table values ('faculty') , ('dean') , ('associate dean'),('Dean Faculty Affairs'), ('hod') , ('director') , ('end');
+
+insert into transition values (1, 'faculty' , 'hod') ,(1,'hod','Dean Faculty Affairs') ,(1,'Dean Faculty Affairs' ,'end') ,(2,'Dean Faculty Affairs','director') , (2, 'director' , 'end') , (3, 'associate dean','Dean Faculty Affairs') , (3, 'Dean Faculty Affairs' , 'end') , (4,'hod','director') , (4,'director' , 'end');
+	
+	
+
+insert into  faculty values('anthony_achille','Anthony Achille' , 'Faculty' ,'cse', 30 , 30),
+('mark_smith', 'Mark Smith' , 'Faculty' ,'cse', 30 , 30),
+('harry_acosta' , 'Harry Acosta' , 'HOD_CSE' ,'cse', 30 ,30),
+('lohit_subodh','lohit subodh','Faculty','cse',30,30); 
+
+insert into faculty  values('amir_a','Amir A.' , 'Faculty' , 30 , 30),
+('ethan_akin', 'Ethan Akin' , 'Faculty' , 30 , 30),
+('marvia_alston' , 'Marvia Alston' , 'HOD_EE' , 30 ,30); 
+
+
+insert into faculty values('anurag_agarwal','Anurag Agarwal' , 'Faculty' , 30 , 30),
+('annita_alting', 'Annita Alting' , 'Faculty' , 30 , 30),
+('punit_arora' , 'Punit Arora' , 'HOD_ME' , 30 ,30); 
+
+
+insert into faculty values('salar_abdoh','Salar Abdoh' , 'Dean Faculty Affairs' , 30 , 30),
+('grisel_abreu', 'Grisel Abreu' , 'Associate Dean Faculty Affairs' , 30 , 30),
+('emine_abali' , 'Emine Abali' , 'Director' , 30 ,30); 
+
+
+insert into login_info values('lohit_subodh','123');
+
+insert into login_info values('mark','1234');
+
+insert into faculty values('puneet_goyal','Puneet Goyal','hod','cse',30,30),
+('ravi_teja','Ravi Teja','hod','ee',30,30),
+('sc_roy','Sc Roy','hod','me',30,30),
+('anupam_agrawal','Anupam Agrawal','faculty','me',30,30),
+('mukesh_saini','mukesh saini' , 'faculty','cse' , 30 , 30),
+('sk_das','sk das','director','cse',30,30),
+('ramjee_repaka','ramjee repaka','faculty','me',30,30),
+('manish_agrawal','manish agrawal','faculty','me',30,30),
+('lohit_subodh','lohit subodh' , 'faculty','cse' , 30 , 30);
+
+insert into login_info values('puneet_goyal','123');
+
+insert into login_info values('mukesh_saini','123'),
+('sk_das','123');
+
+insert into faculty values('anupam_agrawal','Anupam Agrawal','faculty','me',30,30);
+
+insert into login_info values ('anupam_agrawal','123');
+update application
+set  leaves_remaining=30
+where user_id='lohit_subodh';
+
+
+insert into faculty values('mukesh_saini','mukesh saini' , 'Dean Faculty Affairs','cse' , 30 , 30);	
+insert into faculty values ('sk_das','sk das','director','cse',30,30);
+insert into process values (default,'dean faculty affairs');
+
+insert into faculty values('ramjee_repaka','ramjee repaka','hod','me',30,30),
+('manish_agrawal','manish agrawal','faculty','me',30,30);
+
+insert into login_info values ('ramjee_repaka','123'),
+('manish_agrawal','123'),
+('dheeraj_mahajan','123'),
+('mukesh_saini','123'),
+('sk_das','123'),
+('puneet_goyal','123'),
+('lohit_subodh','123');
+
+insert into transition values (5, 'dean faculty affairs' , 'director') ,(5,'director','end');
+
+insert into designation_table values ('dean faculty affairs');
+
+insert into login_info values ('dheeraj_mahajan','123');
+
+update faculty set designation='Dean Faculty Affairs' where user_id='dheeraj_mahajan';
+
+insert into faculty values('dheeraj_mahajan','dheeraj mahajan','faculty','me',30,30);
+insert into faculty values('pk_raina','pk raina','director','me',30,30);
+
+//trigger
+
+CREATE OR REPLACE FUNCTION designation_check_fn() RETURNS trigger AS $$
+    BEGIN
+		IF NEW.department is NULL THEN
+			NEW.department:=OLD.department;
+		END IF;
+		
+        IF NEW.designation IS NULL THEN
+            RETURN NEW;
+        ElseIF (NEW.designation='hod') AND EXISTS(select * from faculty 
+												  where department=NEW.department and 
+												  designation=NEW.designation) THEN
+            RAISE EXCEPTION '% % post is currently filled',NEW.designation,New.department;
+		ElseIF (NEW.designation='hod') Then
+			return new;			
+        END IF;
+		
+		IF EXISTS(select * from faculty where designation=NEW.designation) THEN
+			RAISE EXCEPTION '% post is currently filled',NEW.designation;
+		END IF;
+        
+        RETURN NEW;
+    END;
+$$ LANGUAGE plpgsql;
+
+
+CREATE TRIGGER designation_check BEFORE INSERT OR UPDATE ON faculty
+FOR EACH ROW EXECUTE PROCEDURE designation_check_fn();
+
+////////////////////////////////////////////////////////////////////////////////////
+
+CREATE OR REPLACE FUNCTION designation_check_fn() RETURNS trigger AS $$
+    BEGIN
+		IF NEW.department is NULL THEN
+			NEW.department:=OLD.department;
+		END IF;
+		
+        IF NEW.designation='faculty' THEN
+            RETURN NEW;
+	/*ElseIF OLD.designation<>'faculty' THEN
+	    RAISE EXCEPTION 'A Faculty can not take up more than one post at at time';*/
+        ElseIF (NEW.designation='hod') AND EXISTS(select * from faculty 
+												  where department=NEW.department and 
+												  designation=NEW.designation) THEN
+            RAISE EXCEPTION '% % post is currently filled',NEW.designation,New.department;
+		ElseIF (NEW.designation='hod') Then
+			return new;			
+        END IF;
+		
+		IF EXISTS(select * from faculty where designation=NEW.designation) THEN
+			RAISE EXCEPTION '% post is currently filled',NEW.designation;
+		END IF;
+        
+        RETURN NEW;
+    END;
+$$ LANGUAGE plpgsql;
+
+
+CREATE TRIGGER designation_check BEFORE INSERT OR UPDATE ON faculty
+FOR EACH ROW EXECUTE PROCEDURE designation_check_fn();
+
+create table retro_transition
+(
+	process_id serial references process(process_id),
+	curr_state varchar(30) references designation_table(designation),
+	next_state varchar(30) references designation_table(designation)
+);
+
+
+DROP TRIGGER designation_check ON faculty;
+
+
+insert into retro_transition values (1, 'faculty' , 'hod') ,(1,'hod','Dean Faculty Affairs') ,(1,'Dean Faculty Affairs' ,'director'),(1,'director','end') ,(2,'Dean Faculty Affairs','director') , (2, 'director' , 'end') , (3, 'associate dean','Dean Faculty Affairs') , (3, 'Dean Faculty Affairs' , 'end') , (4,'hod','director') , (4,'director' , 'end');
+
+
+insert into login_info values ('sc_roy','123');
+
+insert into faculty values('dheeraj_mahajan','dheeraj mahajan' , 'Dean Faculty Affairs','me' , 30 , 30);	
